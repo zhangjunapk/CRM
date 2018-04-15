@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#">增加</a>
+<a href="#">删除</a>
+<a href="#">修改</a>
+<a href="#">查看</a>
+<table th:each="department:${department_list}">
+    <th>
+    <td>department_id</td>
+    <td>name</td>
+    <td>info</td>
+    </th>
+
+    <tr>
+        <td th:text="${department.department_id}"></td>
+        <td th:text="${department.name}"></td>
+        <td th:text="${department.info}"></td>
+    </tr>
+</table>
+</body>
+</html>
